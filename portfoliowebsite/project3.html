@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <link rel="stylesheet" href="styles4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Credit Risk Identification With A Loan Risk Model</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project1.html">Project 1</a></li>
+                <li><a href="project2.html">Project 2</a></li>
+                <li><a href="project3.html">Project 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Text content on the top, extending to the bottom -->
+        <div class="text-content">
+            <h2>Project Overview</h2>
+            <p class="rectangle-text">
+                This project was done using supervised machine learning to classify the status of loans within a dataset as healthy or high-risk.
+                defaults through the use of a Logistic Regression Model. The was used to ideentify loans that
+                are likely to be healthy and loans that are likely to default from a dataset of loan borrower information.
+                This main variable used to make predictions was a field named 'loan status'. 
+            </p>
+            <h2>Data Preparation</h2>
+            <p class="rectangle-text2">
+                
+                The financial information in the dataset includes the loan size, interest rate, borrower income, debt to income, 
+                number of accounts, derogatorry marks, total debt and loan status. The loan status was key in 
+                identifying whether a loan would be healthy or at high-risk for defaulting.
+            </p>
+            <h2>Machine Learning Process</h2>
+            <p class="rectangle-text">
+                    • Read the csv file into a pandas dataframe to view its contents.<br>
+                    • Seperated the target variable of loan status (y) from the features (X).<br>
+                    • Split the data into training and testing sets using Train-Test-Split where the training set trains the model and the testing set evaluates the performance of the model.<br>
+                    • Used a logistic regression model and fit the model using the training data.<br>
+                    • The performance of the model was evaluated through a confusion matrix and classification report.<br>
+                    • The confusion matrix provided insights into the number of true positives, true negatives, false positivesm and false negatives.<br>
+                    • The classification report provided insights about the precision, recall, F1-score, and support.<br>
+        
+            </p>
+            <h2>Model Performance</h2>
+            <p class="rectangle-text2">
+              
+                The logistic regression model was extremely accurate in predicting healthy loans. 
+                This means that the model would be perfectly accurate in predicting loans that would not default. 
+                The model was also quite accurate in predicting high-risk loans, but with a slightly lower accuracy percentage. 
+                Therefore, logistic regression would be a strong pick for predicting healthy and high risk loans. 
+            
+            </p>
+                    
+            <h2>Github Repository Link</h2>
+            <p class="github-link">
+            <a href="https://github.com/taysymoneb/predictionmodelproject.git" target="_blank" class="github-link">Click Here!</a>
+            </p>
+        </div>
+    </main>
+</body>
+</html>

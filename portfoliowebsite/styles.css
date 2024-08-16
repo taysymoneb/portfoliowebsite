@@ -1,0 +1,160 @@
+body {
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #636068;
+}
+
+.container {
+    max-width: 960px; /* Set the maximum width of your website */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding around the content */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.0rem;
+    text-align: center; /* Optional: Add a shadow around the container */
+}
+
+header {
+    background-color: #C3D5F5;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.title-container {
+    margin-bottom: 1rem;
+}
+
+.profile-picture {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Keep this the same as width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    margin-bottom: 1rem;
+}
+
+.title-container h1 {
+    font-weight: 700;
+    font-size: 2.5rem; /* Adjust the size as needed */
+    margin: 0;
+}
+
+.title-container h2 {
+    font-size: 2.0rem;
+    margin: 0;
+    color: #636068;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e444af; /* Change color on hover */
+    text-shadow: 0 0 10px rgba(248, 49, 158, 0.7); /* Add glowing effect */
+}
+
+.main-content {
+    display: flex;
+    gap: 20px; /* Add space between the columns */
+    justify-content: space-between;
+}
+
+#resume {
+    width: 65%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#summary {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.4rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.0rem;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.3rem; /* Adjust the size to your preference */
+    color: #e444af;
+    margin-bottom: 0;
+}
+
+h6 {
+    font-size: 1.1rem; /* Adjust the size to your preference */
+    color: #44b1e4;
+    margin-bottom: 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+
+/* Block text styling */
+.block-text {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20}
+
+/* Styling for the h4 element */
+h4 a{
+    color: #e444af; /* This sets the color of the h4 text, but won't affect the link */
+}
+
+/* Basic link color */
+h4 a {
+    color: #e444af; /* Initial color of the link */
+    text-decoration: none; /* Remove underline from link */
+}
+
+/* Link color on hover */
+h4 a:hover {
+    color: #44b1e4; /* Change to your desired color on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Link color when clicked or visited */
+h4 a:visited {
+    color: #e444af; /* Replace with your desired color for visited links */
+}
+
+h5 {
+    font-size: 1.2rem; /* Adjust the size as needed */
+    font-weight: bold; /* Adjust the weight for emphasis */
+    color: #32333E; /* Set the text color */
+    margin: 10px 0; /* Add some margin for spacing */
+    line-height: 1.4; /* Adjust the line height for readability */
+    letter-spacing: 0.05rem; /* Optional: Adjusts the spacing between letters */
+}
+

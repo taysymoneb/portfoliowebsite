@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="styles2.css">
+    
+</head>
+<body>
+    <header>
+        <h1>A Comprehensive Sales and Operations Analysis for a Retail Business</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project1.html">Project 1</a></li>
+                <li><a href="project2.html">Project 2</a></li>
+                <li><a href="project3.html">Project 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Text content on the top, extending to the bottom -->
+        <div class="text-content">
+            <h2>Project Overview</h2>
+            <p class="rectangle-text">
+                This project was completed using a variety of analytical tools to gain insight into a year's
+                worth of sales for a fictional retail business. This was done to determine the key performance indicators and other useful information. This type of analysis is vital in understanding the financial health of a 
+                company and highlighting areas for improvement in operation costs and where revenue can be optimized.
+            </p>
+            <h2>Key Business Questions</h2>
+            <p class="rectangle-text2">
+                <strong>Question 1:</strong> What are the sales trends over the year (e.g., peak sales periods, slow periods)?<br>
+                <strong>Question 2:</strong> Which items have the highest sales volume or generate the most revenue?<br>
+                <strong>Question 3:</strong> Are there any areas where costs can be optimized?<br>
+            </p>
+            <h2>Data Cleaning</h2>
+            <p class="rectangle-text">
+               <strong>Cleaning the Sales CSV file with Python</strong><br><br>
+                    • Imported the original uncleaned CSV flat file into Jupyter Notebook.<br>
+                    • Checked the data types to see what columns needed to be converted to a different type.<br>
+                    • Used Python (pandas import) to check for null values and duplicated values.<br>
+                    • Converted the date, time, ItemID, and onlineorder columns to the correct data types.<br>
+                    • Used the explode function in Python to create a separate row for each item in the ItemID column.<br>
+                    • Dropped the quantity column because each item in every order now has its own row.<br>
+                    • Imported the item catalog to get the correct unit price for each item in the itemID column.<br>
+                    • Dropped the order total column because each item is matched with a unit price.<br>
+                    • Created a serialID column to use as a primary key in SQL.<br>
+                    • Exported the clean sales CSV file.<br><br>
+                    <strong>*I repeated a similar process for the other available csv files.*</strong>
+            </p>
+            <h2>Data Analysis</h2>
+            <p class="rectangle-text2">
+               <strong>Analysis with PostgresSQL</strong><br><br>
+               • Engineered a database to hold the cleaned csv files in PostgresSQL.<br>
+               • Created an entity relationship diagram to show the relationships and referiential integrity of the tables.<br>
+               • Queried the data to discover key facts such as total order amount, total sales, product performance information, and more.<br>
+               <img src="nola_sweets_ERD.png" alt="Entity Relationship Diagram" style="width:100%; height:auto; margin-top:20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">
+            </p>
+                    
+            <h2>Data Visualization</h2>
+            <p class="rectangle-text">
+            <Strong>Tableau Dashboard Details:</Strong><br><br>        
+               • The total profit for each item that was sold.<br>
+               • The total profit for each month.<br>
+               • The net change from month to month.<br>
+               • The hourly trend for sales.<br><br>
+               <strong>(see below)</strong>
+            </p>
+            <h2>Key Insights</h2>
+            <p class="rectangle-text2">
+                <strong>Sales Trends</strong><br><br>
+                Sales trends over the year follow a seasonal pattern. There is a signifcant increase in sales
+                during the months of <strong>March (Mardi Gras), November, and December</strong> assuming that this is caused by holidays associated with these months.
+                There is a <strong>significant decrease</strong> in sales <strong>during summer months</strong> regardless of marketing efforts. To optimize sales during the summer time period,
+                it may be useful to market seasonal products and/or increase the size and scope of marketing efforts during June, July, and August.<br><br>
+                <strong>Product Performance</strong><br><br>
+                The products that generated the most revenue over all both online and in person were the <strong>Rum Cake, Banana Pudding Pound Cake, and Pecan Pie.</strong> 
+                In terms of the products that were ordered the most frequently, <strong>The Banana Pudding Pound Cake</strong> was ordered the <strong>most frequently online</strong>, and <strong>The
+                Mardi Gras Cupcake</strong> was ordered the most <strong>in person</strong>. The <strong>least</strong> frequently ordered item <strong>in person</strong> was the person was <strong>The Praline Cupcake</strong> 
+                and <strong>online The King Cake Cupcake.</strong><br><br>
+                <strong>Operations and Cost Management</strong><br><br>
+                The operation that cost the most from month to month was the <strong>hourly wages</strong>. A large sum of money was put into the 
+                <strong>investment and contigency fund</strong>. Also, the cost for the monthly <strong>online food supply</strong> was twice as much as the cost for the in person
+                food supply, but this correlates with the higher volume of online orders.To optimize costs and increase net profit, the overall food cost can possibly be lowered by buying food from vendors with a slightly lower food quality. Also, money spent 
+                in the <strong>other</strong> category should be inspected to see if that cost is necessary or not.
+                </p>            
+
+            <h2>Github Repository Link</h2>
+            <p class="github-link">
+            <a href="https://github.com/taysymoneb/retailproject.git" target="_blank" class="github-link">Click Here!</a>
+            </p>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Tableau Dashboard centered -->
+        <div class="dashboard">
+            <div class='tableauPlaceholder' id='viz1722662985450' style='position: center'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Dashboard 2' src='https://public.tableau.com/static/images/no/nolasweetsdashboard/Dashboard2/1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='nolasweetsdashboard/Dashboard2' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/no/nolasweetsdashboard/Dashboard2/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1722662985450');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) { 
+                    vizElement.style.width='900px'; 
+                    vizElement.style.height='900px'; 
+                } else if (divElement.offsetWidth > 500) { 
+                    vizElement.style.width='700px'; 
+                    vizElement.style.height='700px'; 
+                } else { 
+                    vizElement.style.width='100%'; 
+                    vizElement.style.height='800px'; 
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 2</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Junge&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles3.css"> <!-- Link to your CSS file -->
+    </head>
+<body>
+    <header>
+        <h1>Customer Segmentation for Hotel Reservation Marketing Strategies</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project1.html">Project 1</a></li>
+                <li><a href="project2.html">Project 2</a></li>
+                <li><a href="project3.html">Project 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Text content on the top, extending to the bottom -->
+        <div class="text-content">
+            <h2>Project Overview</h2>
+            <p class="rectangle-text">
+                This project was done using unsupervised learning, specifically with K-means clustering. The goal of this project was to segment customers based on 
+                key features such as lead time or the length of their stay. The main objective was to identify customer segments to develop a marketing strategy 
+                to appeal to different customer types based on their booking behaviors.
+             
+        
+            <h2>Data Preparation</h2>
+            <p class="rectangle-text">
+               <strong>Cleaning the Hotel CSV File with Excel Power Query</strong><br><br>
+                    • Filtered out the values with "0" in the no_of_adults due to it representing a small portion of the dataset and not knowing whether or not this is representative of an error. Usually hotel bookings need adults present to book a hotel room.<br>
+                    • Checked for null and missing values.<br>
+                    • Converted the type_of_meal_plan column to the numeric data type and changed the values to 0, 1, or 2 based on the condition in the original column(0 = not selected, 1 = meal plan 1, 2 = meal plan 2).<br>
+                    • Converted the room_type_reserved column and created a new column to only display the number of the room type and not the words and number. Converted the data type to whole number.<br>
+                    • Combined the weekday and week night columns into a total nights stayed column.<br>
+                    • Made a new column to display the total price by multiplying the average room price on total nights stayed column.<br>
+            </p>
+            <h2>K-Means Clustering and Analysis in Jupyter Notebook</h2>
+            <p class="rectangle-text2">
+               <strong>Analysis with Python</strong><br><br>
+               • Selected numeric features/columns for clustering.<br>
+               • Standardized the features using SKLearn standard scaler.<br>
+               • Used Principal Component Analysis to reduce the dimensions of the scaled features.<br>
+               • Calculated Silhouette Scores to see what amount of clusters would be optimal for clustering.<br>
+               • Also calculated the inertia and used the elbow method to choose the right amount of clusters.<br>
+               • Applied K-Means to three cluster groups.<br>
+               • Calculated the mean for cluster groups.<br>
+               • Used seaborn to create boxplots for lead time and total nights distribution amonst cluster groups.<br>
+            </p>
+                    
+            <h2>Visualizations With Matplotlib and Seaborn</h2>
+            <p class="rectangle-text">
+            <Strong>K-Means Cluster Graph</Strong><br>
+            <img src="kmeans.png" alt="K-Means Graph" style="width:100%; max-width:600px;"><br>
+            <Strong>Elbow Method Graph</Strong><br>
+            <img src="elbow.png" alt="Elbow Method Graph" style="width:100%; max-width:600px;"><br>
+            <strong>Silhouette Score Graph</strong><br>
+            <img src="silhouette.png" alt="Silhouette Graph" style="width:100%; max-width:600px;"><br>
+            <strong>Box Plot For Clusters Based on Lead Time</strong><br>
+            <img src="leadtime.png" alt="Lead Time Graph" style="width:100%; max-width:600px;"><br>
+            <strong>Box Plot For Clusters Based on Length of Stay</strong><br>
+            <img src="totalnights.png" alt="Total Nights Graph" style="width:100%; max-width:600px;"><br>
+                
+            </p>
+            <h2>Customer Segmentation Based on Booking Lead Times and Stay Length</h2>
+            <p class="rectangle-text2">
+            <strong>Customers With A Short Stay and Moderate Lead Time</strong><br><br>
+            • Advertise short getaway packages or weekday deals.<br>
+            • Market convenient booking options with multiple ways to book.<br>
+            • Offer added services free of charge like free breakfast and express check-in and check-out.<br><br>
+            <strong>Customers With A Long Stay and Varied Lead Time</strong><br><br>
+            • Offer booking discounts and/or loyalty programs for extended stays.<br>
+            • Promote packages that include extra amenities like free meal plans, free access to a spa center, or complementary laundry services.<br>
+            • Offer both early booking specials and last minute deals to appeal to different booking behaviors.<br>
+            • Advertise bundles that include special offers to local attractions.<br><br>
+            <strong>Customers With A Short Stay and Short Lead Time</strong><br><br>
+            • Highlight last-minute "Hot" deals.<br>
+            • Use ads and push notifications to reach nearby users who may be seeking to book at the last minute.<br>
+            • Offer flexibility when booking such as free cancellations and an option to change their booking dates.<br><br>
+            </p>
+            
+            <h2>Github Repository Link</h2>
+            <p class="github-link">
+            <a href="https://github.com/taysymoneb/segmentationproject.git" target="_blank" class="github-link">Click Here!</a>
+            </p>
+        </div>
+        </div>
+        </div>
+        </div>
+
+       
